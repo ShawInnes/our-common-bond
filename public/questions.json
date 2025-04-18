@@ -1,0 +1,112 @@
+[
+  {
+    "question": "What is the role of the Australian Electoral Commission (AEC)?",
+    "section": "Government and the Law in Australia",
+    "options": [
+      "Decide election winners",
+      "Influence government policies",
+      "Conduct federal elections and maintain the electoral roll",
+      "Enforce voting fines"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What is required for a referendum to change the Australian Constitution?",
+    "section": "Government and the Law in Australia",
+    "options": [
+      "Unanimous vote in Parliament",
+      "Majority of voters in a majority of states and nationwide",
+      "Approval by the Prime Minister only",
+      "Royal Assent by the King"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Who represents the King of Australia in the Australian Government?",
+    "section": "Government and the Law in Australia",
+    "options": [
+      "Prime Minister",
+      "Chief Minister",
+      "Governor",
+      "Governor-General"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Which of the following has the power to apply and interpret Australian laws?",
+    "section": "Government and the Law in Australia",
+    "options": [
+      "Cabinet",
+      "Parliament",
+      "High Court and judges",
+      "Prime Minister"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What is the main role of the Senate?",
+    "section": "Government and the Law in Australia",
+    "options": [
+      "To appoint the Prime Minister",
+      "To represent the King",
+      "To review and vote on proposed laws",
+      "To enforce court rulings"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Who becomes Prime Minister after a federal election?",
+    "section": "Government and the Law in Australia",
+    "options": [
+      "The leader of the party with the most Senate seats",
+      "The person chosen by the Governor-General",
+      "The leader of the party with majority in the House of Representatives",
+      "The longest-serving Member of Parliament"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What are the three levels of government in Australia?",
+    "section": "Government and the Law in Australia",
+    "options": [
+      "State, Commonwealth, Royal",
+      "Federal, State and Territory, Local",
+      "Legislative, Executive, Judicial",
+      "Parliament, Cabinet, Court"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Which of the following is a responsibility of local government?",
+    "section": "Government and the Law in Australia",
+    "options": [
+      "Defence",
+      "Immigration",
+      "Parks, libraries, and rubbish collection",
+      "Healthcare funding"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What is the function of the Cabinet in Australian government?",
+    "section": "Government and the Law in Australia",
+    "options": [
+      "To interpret the Constitution",
+      "To conduct local council meetings",
+      "To sign Bills into law",
+      "To make key government decisions and policies"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "What does 'Royal Assent' mean?",
+    "section": "Government and the Law in Australia",
+    "options": [
+      "Approval of new citizens",
+      "Permission to hold a federal election",
+      "The Governor-General signing a Bill to become law",
+      "The King's personal endorsement of political candidates"
+    ],
+    "answer": 2
+  }
+]
