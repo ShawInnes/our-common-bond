@@ -94,8 +94,8 @@ function App() {
   // Results screen
   if (currentStep === 'results') {
     return (
-      <div className="dark:bg-gray-800 flex h-screen w-full justify-center">
-        <div className="bg-white rounded-lg shadow-md p-6 my-4">
+      <div className="dark:bg-gray-800 flex h-screen w-full justify-center overflow-hidden">
+        <div className="bg-white rounded-lg shadow-md p-6 my-4 overflow-y-auto max-h-full">
           <h1 className="text-3xl font-bold text-gray-800 mb-4 text-center">Quiz Results</h1>
           <div className="text-center mb-6">
             <p className="text-5xl font-bold mb-2 text-blue-600">{score} / {numQuestions}</p>
