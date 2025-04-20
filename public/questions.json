@@ -108,5 +108,731 @@
       "The King's personal endorsement of political candidates"
     ],
     "answer": 2
+  },
+  {
+    "question": "Who are Australia's first inhabitants?",
+    "section": "Australia and its people",
+    "options": [
+      "British settlers",
+      "Chinese gold miners",
+      "Aboriginal and Torres Strait Islander peoples",
+      "European free settlers"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "When did the First Fleet arrive from Great Britain?",
+    "section": "Australia and its people",
+    "options": [
+      "26 January 1788",
+      "1 January 1901",
+      "25 April 1915",
+      "1 January 1851"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What event began in 1851 that significantly increased Australia's population?",
+    "section": "Australia and its people",
+    "options": [
+      "World War I",
+      "The gold rush",
+      "Federation",
+      "Creation of the Commonwealth"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "When did the separate colonies unite to form the Commonwealth of Australia?",
+    "section": "Australia and its people",
+    "options": [
+      "1788",
+      "1851",
+      "1901",
+      "1967"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What is Australia's national language?",
+    "section": "Australia and its people",
+    "options": [
+      "Aboriginal English",
+      "British English",
+      "Australian English",
+      "English"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "How many states are there in Australia?",
+    "section": "Australia and its people",
+    "options": [
+      "6",
+      "7",
+      "8",
+      "10"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What are the colours of the Australian Aboriginal Flag?",
+    "section": "Australia and its people",
+    "options": [
+      "Black, red and yellow",
+      "Green, black and white",
+      "Blue, white and red",
+      "Green, gold and white"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "On Australia Day (26 January), what do we commemorate?",
+    "section": "Australia and its people",
+    "options": [
+      "The day Australia became independent from Britain",
+      "The date of the referendum to include Aboriginal peoples in the census",
+      "The anniversary of the arrival of the First Fleet",
+      "The day the Australian Constitution was signed"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What do we commemorate on Anzac Day (25 April)?",
+    "section": "Australia and its people",
+    "options": [
+      "The landing of the First Fleet in Australia",
+      "The landing of Australian and New Zealand troops at Gallipoli in 1915",
+      "The creation of the Commonwealth of Australia",
+      "The day Aboriginal and Torres Strait Islander peoples were counted in the census"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What are Australia's national colours?",
+    "section": "Australia and its people",
+    "options": [
+      "Red, white and blue",
+      "Blue and white",
+      "Green and gold",
+      "Black, red and yellow"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What is Australia's system of government?",
+    "section": "Australian values",
+    "options": [
+      "Presidential democracy",
+      "Constitutional monarchy",
+      "Parliamentary democracy",
+      "Federal republic"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Under the Rule of Law in Australia, who must obey the law?",
+    "section": "Australian values",
+    "options": [
+      "Only citizens",
+      "Everyone except government officials",
+      "Everyone except religious leaders",
+      "Everyone including people who hold positions of power"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Which of these is a core democratic belief in Australia?",
+    "section": "Australia's democratic beliefs, rights and liberties",
+    "options": [
+      "Change should occur through violence",
+      "Religious leaders should determine laws",
+      "Living peacefully and rejecting violence to change laws",
+      "Only wealthy people should have a say in government"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What is a responsibility of Australian citizens aged 18 years or over?",
+    "section": "Australia's democratic beliefs, rights and liberties",
+    "options": [
+      "Join a political party",
+      "Vote in elections",
+      "Attend citizenship ceremonies",
+      "Become a member of parliament"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Which of these is a privilege of Australian citizenship?",
+    "section": "Australia's democratic beliefs, rights and liberties",
+    "options": [
+      "Avoiding payment of taxes",
+      "Applying for an Australian passport",
+      "Breaking laws without consequences",
+      "Free healthcare for life in any country"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "In Australia, freedom of speech means:",
+    "section": "Australian values",
+    "options": [
+      "People can say or write anything, even if it breaks Australian laws",
+      "Only citizens have the right to speak freely",
+      "People can express their views within the law",
+      "Only the government can determine what people may say"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Which statement about religion in Australia is correct?",
+    "section": "Australian values",
+    "options": [
+      "Australia has an official national religion",
+      "Religious laws have legal status above Australian law",
+      "People in Australia are free to follow any religion or no religion",
+      "The government favors certain religions"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What document sets out the basic rules for the government of Australia?",
+    "section": "Government and the law in Australia",
+    "options": [
+      "The Magna Carta",
+      "The Commonwealth of Australia Constitution Act",
+      "The Declaration of Independence",
+      "The Bill of Rights"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Who is Australia's Head of State?",
+    "section": "Government and the law in Australia",
+    "options": [
+      "The Prime Minister",
+      "The Governor-General",
+      "The Chief Justice",
+      "The King of Australia"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "How is the Australian Government formed after a federal election?",
+    "section": "Government and the law in Australia",
+    "options": [
+      "By appointment from the King",
+      "By the party or coalition with the majority in the House of Representatives",
+      "By the majority vote in the Senate",
+      "By direct election of the Prime Minister"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What are the three levels of government in Australia?",
+    "section": "Government and the law in Australia",
+    "options": [
+      "Federal, judicial and executive",
+      "Executive, legislative and judicial",
+      "National, state and international",
+      "Federal, state/territory and local"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "What is required for a Bill to become law in Australia?",
+    "section": "Government and the law in Australia",
+    "options": [
+      "Approval by the Prime Minister only",
+      "Majority vote in the House of Representatives only",
+      "Agreement by both Houses of Parliament and Royal Assent from the Governor-General",
+      "Unanimous vote by all members of Parliament"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "In Australia's court system, who decides if a person is guilty or not guilty?",
+    "section": "Government and the law in Australia",
+    "options": [
+      "The police",
+      "The government",
+      "The judge or jury",
+      "The Prime Minister"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What is compulsory in Australian federal elections?",
+    "section": "Government and the law in Australia",
+    "options": [
+      "Voting",
+      "Standing for Parliament",
+      "Joining a political party",
+      "Working at a polling booth"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What needs to happen for the Australian Constitution to be changed?",
+    "section": "Government and the law in Australia",
+    "options": [
+      "A decision by the Prime Minister",
+      "A majority vote in Parliament",
+      "A 'double majority' in a referendum",
+      "Approval from the King"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Which Australian value is about treating people fairly regardless of their circumstances?",
+    "section": "Australian values",
+    "options": [
+      "Mateship",
+      "Parliamentary democracy",
+      "A 'fair go'",
+      "Mutual respect"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What does Australia value regarding English language usage?",
+    "section": "Australian values",
+    "options": [
+      "Citizens must speak only English at all times",
+      "People should make an effort to learn English",
+      "Only English is permitted in public places",
+      "Everyone must be fluent in English before arriving"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Which statement about gender equality in Australia is correct?",
+    "section": "Australian values",
+    "options": [
+      "Men and women have equal rights in Australia",
+      "Men have more rights than women in certain areas",
+      "Women have more rights than men in certain areas",
+      "Gender equality varies by state or territory"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What is Australia's stance on violence?",
+    "section": "Australian values",
+    "options": [
+      "Violence is acceptable in certain cultural contexts",
+      "Australia rejects violence as a way to change laws or influence others",
+      "Domestic violence is tolerated if it's part of a tradition",
+      "Violence is permitted when defending personal beliefs"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What is meant by 'mateship' in Australian values?",
+    "section": "Australian values",
+    "options": [
+      "Forming business partnerships",
+      "Only helping those who can help you in return",
+      "Helping each other in times of need",
+      "Maintaining formal relationships with neighbors"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What does the shield in the Commonwealth Coat of Arms represent?",
+    "section": "Australia's symbols",
+    "options": [
+      "The King of Australia",
+      "The six states and federation",
+      "The Prime Minister and cabinet",
+      "The Commonwealth Parliament"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Which animals support the shield in the Commonwealth Coat of Arms?",
+    "section": "Australia's symbols",
+    "options": [
+      "A koala and a dingo",
+      "A platypus and an echidna",
+      "A kangaroo and an emu",
+      "A wombat and a kookaburra"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What is Australia's national gemstone?",
+    "section": "Australia's symbols",
+    "options": [
+      "Diamond",
+      "Opal",
+      "Emerald",
+      "Sapphire"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "According to Aboriginal legend, how was the opal created?",
+    "section": "Australia's symbols",
+    "options": [
+      "From tears of ancient ancestors",
+      "From a rainbow that touched the earth",
+      "From sacred campfires burning underground",
+      "From stars that fell to the earth"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What is Australia's national flower?",
+    "section": "Australia's symbols",
+    "options": [
+      "Golden wattle",
+      "Waratah",
+      "Kangaroo paw",
+      "Desert rose"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Which freedom allows Australians to join or leave any group voluntarily as long as it is within the law?",
+    "section": "Australian values",
+    "options": [
+      "Freedom of speech",
+      "Freedom of religion",
+      "Freedom of association",
+      "Freedom of expression"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "In Australia, which statement about freedom of religion is correct?",
+    "section": "Australian values",
+    "options": [
+      "Religious laws have priority over Australian laws",
+      "Australia has a Judaeo-Christian heritage but no official national religion",
+      "All Australians must follow a religion",
+      "Religious practices are exempt from Australian laws"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Which of these is a responsibility of Australian citizens?",
+    "section": "Responsibilities and privileges of Australian citizenship",
+    "options": [
+      "Joining a political party",
+      "Serving on a jury if called to do so",
+      "Attending all local council meetings",
+      "Paying for all government services"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Which is a privilege of Australian citizenship?",
+    "section": "Responsibilities and privileges of Australian citizenship",
+    "options": [
+      "Automatic employment in the government",
+      "Seeking election to parliament",
+      "Exemption from certain Australian laws",
+      "Free international travel to all countries"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What happens if an Australian citizen is also a citizen of another country?",
+    "section": "Australian values",
+    "options": [
+      "They must renounce one citizenship",
+      "They must follow Australian laws while in Australia",
+      "They cannot vote in Australian elections",
+      "They cannot work for the Australian government"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Which of these is identified as a core Australian value?",
+    "section": "Australian values",
+    "options": [
+      "Strict religious observance",
+      "Commitment to the Rule of Law",
+      "Separation of family units",
+      "Class-based society"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What is the Australian perspective on racism?",
+    "section": "Australian values",
+    "options": [
+      "It is tolerated in certain circumstances",
+      "It has no place in Australian society",
+      "It is permitted in private settings",
+      "It is acceptable in sporting events"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What does 'integration' mean in the Australian context?",
+    "section": "Australian values",
+    "options": [
+      "Completely abandoning one's cultural heritage",
+      "Living in isolated cultural communities",
+      "The process of adaptation by migrants to participate in Australian society",
+      "Mandatory conversion to mainstream religious beliefs"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "How many territories does Australia have?",
+    "section": "Australia and its people",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Which house of Parliament has representatives based on population?",
+    "section": "Government and the Law in Australia",
+    "options": [
+      "The Senate",
+      "The House of Representatives",
+      "The Cabinet",
+      "The High Court"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What is the term length for Senators in the Australian Parliament?",
+    "section": "Government and the Law in Australia",
+    "options": [
+      "3 years",
+      "4 years",
+      "6 years",
+      "8 years"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What are the colors of the Australian National Flag?",
+    "section": "Australia's symbols",
+    "options": [
+      "Green and gold",
+      "Red, white and blue",
+      "Black, red and yellow",
+      "Blue, white and red"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What is the Torres Strait Islander Flag's color scheme?",
+    "section": "Australia's symbols",
+    "options": [
+      "Green, blue, black and white",
+      "Black, red and yellow",
+      "Red, black and green",
+      "Blue, white and green"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What is Australia's national anthem?",
+    "section": "Australia's symbols",
+    "options": [
+      "God Save the King",
+      "Waltzing Matilda",
+      "Advance Australia Fair",
+      "I Still Call Australia Home"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Which of these is a responsibility of all Australian residents?",
+    "section": "Responsibilities and privileges of Australian citizenship",
+    "options": [
+      "Voting in elections",
+      "Serving in the armed forces",
+      "Paying taxes if required",
+      "Becoming an Australian citizen"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Australia's current system of democracy is based on which traditions?",
+    "section": "Government and the Law in Australia",
+    "options": [
+      "American and French",
+      "British and North American",
+      "European and Asian",
+      "Indigenous and Colonial"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Which statement about multiculturalism in Australia is correct?",
+    "section": "Australian values",
+    "options": [
+      "All cultural practices are accepted regardless of Australian law",
+      "Australia celebrates diversity while maintaining shared values and national identity",
+      "Each cultural group maintains separate legal systems",
+      "Only Western cultural practices are permitted"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What is significant about the Eureka Stockade in Australian history?",
+    "section": "Australia and its people",
+    "options": [
+      "It was where gold was first discovered",
+      "It represents an early struggle for democratic rights",
+      "It was the site of the first Parliament",
+      "It was where the Constitution was signed"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "In which year did the Indigenous Australian referendum occur that counted Aboriginal and Torres Strait Islander peoples in the census?",
+    "section": "Australia and its people",
+    "options": [
+      "1901",
+      "1945",
+      "1967",
+      "1988"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What is the role of the Federal Police in Australia?",
+    "section": "Government and the Law in Australia",
+    "options": [
+      "Enforce state traffic laws",
+      "Maintain local safety",
+      "Enforce federal criminal law and protect national interests",
+      "Manage state prisons"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Which statement about paying taxes in Australia is correct?",
+    "section": "Responsibilities and privileges of Australian citizenship",
+    "options": [
+      "Only citizens pay taxes",
+      "Taxes are optional for those earning under a certain amount",
+      "Everyone must contribute according to their capacity",
+      "Religious organizations determine tax rates"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What is the significance of the Southern Cross on the Australian flag?",
+    "section": "Australia's symbols",
+    "options": [
+      "It represents the six original colonies",
+      "It shows Australia's location in the Southern Hemisphere",
+      "It represents the monarchy",
+      "It symbolizes the connection to Great Britain"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "How does Australia's preferential voting system work?",
+    "section": "Government and the Law in Australia",
+    "options": [
+      "Voters choose only their favorite candidate",
+      "Voters rank candidates in order of preference",
+      "Voters must select candidates from the same party",
+      "Voters can choose to abstain from voting"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What is the purpose of the separation of powers in Australian government?",
+    "section": "Government and the Law in Australia",
+    "options": [
+      "To ensure state and federal governments remain separate",
+      "To prevent any single branch of government from having too much power",
+      "To separate Australia from the monarchy",
+      "To keep religion separate from government"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What does the Commonwealth Star on the Australian flag represent?",
+    "section": "Australia's symbols",
+    "options": [
+      "The Southern Hemisphere",
+      "The six states and territories",
+      "Australia's independence",
+      "The six states and the Commonwealth"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "What is an important value in Aboriginal and Torres Strait Islander cultures?",
+    "section": "Australia and its people",
+    "options": [
+      "Connection to country",
+      "Written documentation",
+      "Urban development",
+      "Industrial progress"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What is the maximum time someone can be detained without charge in Australia under normal circumstances?",
+    "section": "Our freedoms",
+    "options": [
+      "24 hours with possible extensions",
+      "48 hours with no extensions",
+      "7 days regardless of circumstances",
+      "14 days for all offenses"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What is the role of local councils in Australia?",
+    "section": "Government and the Law in Australia",
+    "options": [
+      "Managing foreign affairs",
+      "Providing national defense",
+      "Delivering local services to communities",
+      "Setting immigration policies"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Which of these is a key element of Australia's democratic system?",
+    "section": "Australia's democratic beliefs, rights and liberties",
+    "options": [
+      "Mandatory religious beliefs",
+      "Government control of all businesses",
+      "Regular elections with secret ballots",
+      "Lifetime appointments for politicians"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What is the purpose of the Australian Human Rights Commission?",
+    "section": "Our freedoms",
+    "options": [
+      "To conduct elections",
+      "To investigate complaints about discrimination and human rights breaches",
+      "To manage immigration",
+      "To oversee foreign policy"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Which group of people must be treated equally under Australian law?",
+    "section": "Australia's democratic beliefs, rights and liberties",
+    "options": [
+      "Only citizens",
+      "Only people born in Australia",
+      "Everyone in Australia regardless of background",
+      "Only those who speak English"
+    ],
+    "answer": 2
   }
 ]

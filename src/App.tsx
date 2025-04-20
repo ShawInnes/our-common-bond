@@ -1,7 +1,8 @@
 import {useEffect, useState} from 'react';
 import {loadQuestions, QuestionsArray} from './data/questions.ts';
 
-const numQuestions = 10;
+const numQuestions = 15;
+const valuesQuestions = 5;
 
 function App() {
   const [allQuestions, setAllQuestions] = useState<QuestionsArray>([]);
@@ -9,6 +10,7 @@ function App() {
   const [error, setError] = useState<string | null>(null);
   const [userAnswers, setUserAnswers] = useState<number[]>([]);
   const [currentStep, setCurrentStep] = useState<'loading' | 'start' | 'quiz' | 'results'>('loading');
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
   const [score, setScore] = useState<number>(0);
 
   useEffect(() => {
@@ -21,18 +23,45 @@ function App() {
   }, []);
 
   const startQuiz = () => {
-    // Get 10 random questions
-    const shuffled = [...allQuestions].sort(() => 0.5 - Math.random());
-    const selected = shuffled.slice(0, numQuestions);
+    // Filter Australian values questions
+    const australianValuesQuestions = allQuestions.filter(q => q.section === 'Australian values');
+    // Filter all other questions
+    const otherQuestions = allQuestions.filter(q => q.section !== 'Australian values');
+
+    // Shuffle and select from each set
+    const selectedValuesQuestions = [...australianValuesQuestions]
+      .sort(() => 0.5 - Math.random())
+      .slice(0, valuesQuestions);
+
+    const selectedOtherQuestions = [...otherQuestions]
+      .sort(() => 0.5 - Math.random())
+      .slice(0, numQuestions);
+
+    // Combine the two sets and shuffle again to mix them
+    const selected = [...selectedValuesQuestions, ...selectedOtherQuestions]
+      .sort(() => 0.5 - Math.random());
+
     setQuizQuestions(selected);
-    setUserAnswers(new Array(numQuestions).fill(-1));
+    setUserAnswers(new Array(selected.length).fill(-1));
     setCurrentStep('quiz');
   };
 
-  const handleAnswerSelect = (questionIndex: number, answerIndex: number) => {
+  const handleAnswerSelect = (answerIndex: number) => {
     const newAnswers = [...userAnswers];
-    newAnswers[questionIndex] = answerIndex;
+    newAnswers[currentQuestionIndex] = answerIndex;
     setUserAnswers(newAnswers);
+  };
+
+  const goToNextQuestion = () => {
+    if (currentQuestionIndex < quizQuestions.length - 1) {
+      setCurrentQuestionIndex(currentQuestionIndex + 1);
+    }
+  };
+
+  const goToPreviousQuestion = () => {
+    if (currentQuestionIndex > 0) {
+      setCurrentQuestionIndex(currentQuestionIndex - 1);
+    }
   };
 
   const calculateScore = () => {
@@ -78,7 +107,8 @@ function App() {
         <div className="bg-white rounded-lg shadow-md p-6 my-4 text-center">
           <h1 className="text-3xl font-bold text-gray-800 mb-4">Quiz App</h1>
           <p className="text-gray-600 mb-6">
-            This quiz contains {numQuestions} random questions from our database of {allQuestions.length} questions.
+            This quiz contains {numQuestions + valuesQuestions} random questions from the list
+            of {allQuestions.length} questions.
           </p>
           <button
             onClick={startQuiz}
@@ -98,11 +128,11 @@ function App() {
         <div className="bg-white rounded-lg shadow-md p-6 my-4 overflow-y-auto max-h-full">
           <h1 className="text-3xl font-bold text-gray-800 mb-4 text-center">Quiz Results</h1>
           <div className="text-center mb-6">
-            <p className="text-5xl font-bold mb-2 text-blue-600">{score} / {numQuestions}</p>
+            <p className="text-5xl font-bold mb-2 text-blue-600">{score} / {quizQuestions.length}</p>
             <p className="text-gray-600">
-              {score === 10 ? 'Perfect score!' :
-                score >= 7 ? 'Great job!' :
-                  score >= 5 ? 'Good effort!' :
+              {score === quizQuestions.length ? 'Perfect score!' :
+                score >= Math.floor(quizQuestions.length * 0.7) ? 'Great job!' :
+                  score >= Math.floor(quizQuestions.length * 0.5) ? 'Good effort!' :
                     'Keep practicing!'}
             </p>
           </div>
@@ -141,56 +171,118 @@ function App() {
     );
   }
 
-  // Quiz interface
+  // Quiz interface - single question at a time
+  const currentQuestion = quizQuestions[currentQuestionIndex];
+  const answeredCount = userAnswers.filter(a => a !== -1).length;
+  const allQuestionsAnswered = !userAnswers.includes(-1);
+
   return (
     <div className="dark:bg-gray-800 flex h-screen w-full justify-center overflow-hidden">
-      <div className="rounded-lg shadow-md p-6 my-4 overflow-y-auto max-h-full">
+      <div className="bg-white rounded-lg shadow-md p-6 my-4 w-full max-w-3xl">
         <div className="flex justify-between items-center mb-6">
-          <h1 className="text-2xl font-bold text-gray-800">Quiz Questions</h1>
+          <h1
+            className="text-2xl font-bold text-gray-800">Question {currentQuestionIndex + 1} of {quizQuestions.length}</h1>
           <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full font-medium">
-            {userAnswers.filter(a => a !== -1).length} / {numQuestions} answered
+            {answeredCount} / {quizQuestions.length} answered
           </span>
         </div>
 
-        <div className="space-y-8 mb-8">
-          {quizQuestions.map((question, qIndex) => (
-            <div key={qIndex} className="bg-gray-50 rounded-lg p-6 border border-gray-200">
-              <h2 className="text-xl font-semibold text-gray-800 mb-4">
-                {qIndex + 1}. {question.question}
-              </h2>
-              <ul className="space-y-2">
-                {question.options.map((option, oIndex) => (
-                  <li key={oIndex}>
-                    <button
-                      onClick={() => handleAnswerSelect(qIndex, oIndex)}
-                      className={`w-full text-left p-3 rounded-lg transition-colors ${
-                        userAnswers[qIndex] === oIndex
-                          ? 'bg-blue-100 border-blue-300 border'
-                          : 'bg-white border-gray-200 border hover:bg-gray-100'
-                      }`}
-                    >
-                      {option}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+        <div className="mb-8">
+          <div className="bg-gray-50 rounded-lg p-6 border border-gray-200">
+            <h2 className="text-xl font-semibold text-gray-800 mb-4">
+              {currentQuestion.question}
+            </h2>
+            <ul className="space-y-2">
+              {currentQuestion.options.map((option, oIndex) => (
+                <li key={oIndex}>
+                  <button
+                    onClick={() => handleAnswerSelect(oIndex)}
+                    className={`w-full text-left p-3 rounded-lg transition-colors ${
+                      userAnswers[currentQuestionIndex] === oIndex
+                        ? 'bg-blue-100 border-blue-300 border'
+                        : 'bg-white border-gray-200 border hover:bg-gray-100'
+                    }`}
+                  >
+                    {option}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
-        <div className="text-center">
+        <div className="flex justify-between items-center">
           <button
-            onClick={calculateScore}
-            disabled={userAnswers.includes(-1)}
-            className={`py-2 px-6 rounded-lg font-semibold ${
-              userAnswers.includes(-1)
+            onClick={goToPreviousQuestion}
+            disabled={currentQuestionIndex === 0}
+            className={`py-2 px-4 rounded-lg font-medium ${
+              currentQuestionIndex === 0
                 ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                : 'bg-green-600 hover:bg-green-700 text-white transition duration-200'
+                : 'bg-gray-200 hover:bg-gray-300 text-gray-700 transition duration-200'
             }`}
           >
-            {userAnswers.includes(-1) ? 'Answer All Questions to Continue' : 'Submit Answers'}
+            Previous
           </button>
+
+          <div className="flex space-x-2">
+            {quizQuestions.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentQuestionIndex(index)}
+                className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium transition-colors ${
+                  currentQuestionIndex === index
+                    ? 'bg-blue-600 text-white'
+                    : userAnswers[index] !== -1
+                      ? 'bg-blue-100 text-blue-800'
+                      : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
+                }`}
+              >
+                {index + 1}
+              </button>
+            )).slice(0, Math.min(10, quizQuestions.length))}
+            {quizQuestions.length > 10 && (
+              <span className="w-8 h-8 flex items-center justify-center">...</span>
+            )}
+          </div>
+
+          {currentQuestionIndex < quizQuestions.length - 1 ? (
+            <button
+              onClick={goToNextQuestion}
+              className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition duration-200"
+            >
+              Next
+            </button>
+          ) : (
+            <button
+              onClick={calculateScore}
+              disabled={!allQuestionsAnswered}
+              className={`py-2 px-4 rounded-lg font-medium ${
+                !allQuestionsAnswered
+                  ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                  : 'bg-green-600 hover:bg-green-700 text-white transition duration-200'
+              }`}
+            >
+              Finish
+            </button>
+          )}
         </div>
+
+        {!allQuestionsAnswered && currentQuestionIndex === quizQuestions.length - 1 && (
+          <div className="mt-4 text-center text-amber-600">
+            Please answer all questions before submitting.
+          </div>
+        )}
+
+        {answeredCount === quizQuestions.length && currentQuestionIndex !== quizQuestions.length - 1 && (
+          <div className="mt-4 flex justify-center">
+            <button
+              onClick={calculateScore}
+              className="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-6 rounded-lg transition duration-200"
+            >
+              Submit All Answers
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
