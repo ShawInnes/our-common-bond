@@ -129,6 +129,7 @@ function App() {
           <h1 className="text-3xl font-bold text-gray-800 mb-4 text-center">Quiz Results</h1>
           <div className="text-center mb-6">
             <p className="text-5xl font-bold mb-2 text-blue-600">{score} / {quizQuestions.length}</p>
+            <p className="text-5xl font-bold mb-2 text-blue-600">{(score / quizQuestions.length) * 100.0} %</p>
             <p className="text-gray-600">
               {score === quizQuestions.length ? 'Perfect score!' :
                 score >= Math.floor(quizQuestions.length * 0.7) ? 'Great job!' :
@@ -211,11 +212,11 @@ function App() {
           </div>
         </div>
 
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center overflow-x-auto">
           <button
             onClick={goToPreviousQuestion}
             disabled={currentQuestionIndex === 0}
-            className={`py-2 px-4 rounded-lg font-medium ${
+            className={`py-2 px-4 mx-2 rounded-lg font-medium ${
               currentQuestionIndex === 0
                 ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
                 : 'bg-gray-200 hover:bg-gray-300 text-gray-700 transition duration-200'
@@ -239,16 +240,13 @@ function App() {
               >
                 {index + 1}
               </button>
-            )).slice(0, Math.min(10, quizQuestions.length))}
-            {quizQuestions.length > 10 && (
-              <span className="w-8 h-8 flex items-center justify-center">...</span>
-            )}
+            ))}
           </div>
 
           {currentQuestionIndex < quizQuestions.length - 1 ? (
             <button
               onClick={goToNextQuestion}
-              className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition duration-200"
+              className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 mx-2 rounded-lg transition duration-200"
             >
               Next
             </button>
@@ -256,7 +254,7 @@ function App() {
             <button
               onClick={calculateScore}
               disabled={!allQuestionsAnswered}
-              className={`py-2 px-4 rounded-lg font-medium ${
+              className={`py-2 px-4 mx-2 rounded-lg font-medium ${
                 !allQuestionsAnswered
                   ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
                   : 'bg-green-600 hover:bg-green-700 text-white transition duration-200'
