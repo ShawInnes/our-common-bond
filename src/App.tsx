@@ -1,5 +1,6 @@
 import {useEffect, useState} from 'react';
 import {loadQuestions, QuestionsArray} from './data/questions.ts';
+import Confetti from 'react-confetti';
 
 const numQuestions = 15;
 const valuesQuestions = 5;
@@ -12,6 +13,7 @@ function App() {
   const [currentStep, setCurrentStep] = useState<'loading' | 'start' | 'quiz' | 'results'>('loading');
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
   const [score, setScore] = useState<number>(0);
+  const [windowSize, setWindowSize] = useState({width: window.innerWidth, height: window.innerHeight});
 
   useEffect(() => {
     loadQuestions()
@@ -20,6 +22,19 @@ function App() {
         setCurrentStep('start');
       })
       .catch((e) => setError(e.toString()));
+  }, []);
+
+  // Add window resize listener for confetti
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   const startQuiz = () => {
@@ -50,6 +65,14 @@ function App() {
     const newAnswers = [...userAnswers];
     newAnswers[currentQuestionIndex] = answerIndex;
     setUserAnswers(newAnswers);
+
+    // Auto advance to next question after a brief delay
+    // Only advance if not on the last question
+    if (currentQuestionIndex < quizQuestions.length - 1) {
+      setTimeout(() => {
+        setCurrentQuestionIndex(currentQuestionIndex + 1);
+      }, 300); // 300ms delay for better UX
+    }
   };
 
   const goToNextQuestion = () => {
@@ -123,8 +146,19 @@ function App() {
 
   // Results screen
   if (currentStep === 'results') {
+    const isPerfectScore = score === quizQuestions.length;
+
     return (
       <div className="dark:bg-gray-800 flex h-screen w-full justify-center overflow-hidden">
+        {isPerfectScore && (
+          <Confetti
+            width={windowSize.width}
+            height={windowSize.height}
+            recycle={true}
+            numberOfPieces={500}
+            gravity={0.1}
+          />
+        )}
         <div className="bg-white rounded-lg shadow-md p-6 my-4 overflow-y-auto max-h-full">
           <h1 className="text-3xl font-bold text-gray-800 mb-4 text-center">Quiz Results</h1>
           <div className="text-center mb-6">
